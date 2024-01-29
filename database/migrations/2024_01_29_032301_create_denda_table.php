@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('denda', function (Blueprint $table) {
             $table->id();
+            $table->string('judul_buku');
+            $table->string('kode_buku');
+            $table->string('hari_telat');
+            $table->string('jumlah_denda');
             $table->timestamps();
         });
     }

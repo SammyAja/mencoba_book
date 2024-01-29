@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pustakawan', function (Blueprint $table) {
+        Schema::create('fbook', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('password');
+            $table->string('judul');
+            $table->string('pengarang');
+            $table->string('penerbit');
+            $table->integer('tahun_terbit');
+            $table->integer('kode_buku');
+            $table->integer('isbn');
+            $table->string('sinopsis');
+            $table->integer('no_rak');
+            $table->integer('jumlah_copy');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pustakawan');
+        Schema::dropIfExists('fbook');
     }
 };
