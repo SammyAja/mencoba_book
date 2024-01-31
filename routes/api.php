@@ -4,6 +4,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\Mencoba_Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EbookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('hello-world',[Mencoba_Controller::class, 'index']);
 Route::post('register', [AuthController::class, 'Register']);
 
 Route::post('/auth/register',[AuthController::class,'register']);
+
+Route::post('/ebooks', [EBookController::class, 'create']);
