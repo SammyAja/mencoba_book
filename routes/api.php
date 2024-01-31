@@ -28,3 +28,5 @@ Route::controller(AuthController::class)->group(function(){
 Route::get('hello-world',[Mencoba_Controller::class, 'index']);
 
 Route::post('register', [AuthController::class, 'Register']);
+
+Route::post('/auth/register',[AuthController::class,'register']);

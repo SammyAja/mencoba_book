@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'admin',
             'nik'=>'235331',
             'email'=>'admin@gmail.com',
-            'password'=>Hash::make('rahasia'),
+            'password'=>bcrypt('rahasia'),
             'level'=>'admin',
         ]);
     }
