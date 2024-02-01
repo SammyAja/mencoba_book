@@ -18,9 +18,9 @@ return new class extends Migration
             $table->foreign('id')->references('id')->on('users');
             $table->string('judul_buku');
             $table->integer('kode_buku');
-            $table->date('waktu_peminjaman')->default(new DateTime());
-            $table->date('waktu_dikembalikan')->default(new DateTime());
-            $table->enum('status', ['dipinjam', 'dikembalikan', 'terlambat'])->default(['dipinjam', 'dikembalikan', 'terlambat']);
+            //$table->date('waktu_peminjaman')->default(new DateTime());
+            //$table->date('waktu_dikembalikan')->default(new DateTime());
+            //$table->enum('status', ['dipinjam', 'dikembalikan', 'terlambat'])->default(['dipinjam', 'dikembalikan', 'terlambat']);
             $table->string('kondisi_buku');
             $table->timestamps();
         });

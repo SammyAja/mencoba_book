@@ -13,17 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ebooks', function (Blueprint $table) {
+        Schema::create('borrowings', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('pengarang');
-            $table->string('penerbit');
-            $table->integer('tahun_terbit');
-            $table->integer('kode_buku');
-            $table->integer('isbn');
-            $table->string('sinopsis');
-            $table->integer('no_rak');
-            $table->integer('jumlah_copy');
             $table->timestamps();
         });
     }
@@ -35,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ebooks');
+        Schema::dropIfExists('borrowings');
     }
 };

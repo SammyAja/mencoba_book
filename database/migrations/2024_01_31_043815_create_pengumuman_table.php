@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('judul_pengumuman', 50);
             $table->string('deskripsi_pengumuman');
-            $table->date('waktu_pembuatan')->default(new DateTime());
             $table->timestamps();
         });
     }

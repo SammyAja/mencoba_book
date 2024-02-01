@@ -32,4 +32,4 @@ Route::post('register', [AuthController::class, 'Register']);
 
 Route::post('/auth/register',[AuthController::class,'register']);
 
-Route::post('/ebooks', [EBookController::class, 'create']);
+Route::post('/ebook', [EBookController::class, 'create']);

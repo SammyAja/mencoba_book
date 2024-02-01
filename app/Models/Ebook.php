@@ -19,7 +19,7 @@ class Ebook extends Model
         'penerbit'=> 'required|string|max:225',
         'tahun_terbit'=> 'required|integer',
         'kode_buku'=> 'required|integer',
-        'isbn'=> 'required|integer|min:6|max:15',
+        'isbn'=> 'required|integer|min:6',
         'sinopsis'=> 'required|string|max:225',
         'no_rak'=> 'required|integer',
         'jumlah_copy'=> 'required|integer',
