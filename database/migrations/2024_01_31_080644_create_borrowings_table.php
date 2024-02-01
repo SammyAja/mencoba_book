@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('borrowings', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_user');
+            $table->integer('id_buku');
+            $table->date('tanggal_pinjam')->nullable()->default(new DateTime());
+            $table->date('tanggal_kembali')->nullable()->default(new DateTime());
             $table->timestamps();
         });
     }

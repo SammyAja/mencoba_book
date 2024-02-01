@@ -5,7 +5,7 @@ use App\Http\Controllers\Mencoba_Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EbookController;
-
+use App\Http\Controllers\RiwayatPeminjamanController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,3 +33,8 @@ Route::post('register', [AuthController::class, 'Register']);
 Route::post('/auth/register',[AuthController::class,'register']);
 
 Route::post('/ebook', [EBookController::class, 'create']);
+
+Route::prefix('riwayat-peminjaman')->group(function () {
+    Route::get('/', [RiwayatPeminjamanController::class, 'index']);
+    Route::get('/{id}', [RiwayatPeminjamanController::class, 'show']);
+});
